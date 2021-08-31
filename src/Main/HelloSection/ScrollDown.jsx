@@ -8,10 +8,10 @@ const classes = {
 
 function ScrollDown() {
     return (
-        <div className={classes.scrollDown}>
+        <a href='#about' className={classes.scrollDown}>
             <span className={classes.arrowDown}></span>
-            <a href="#about" className={classes.scrollTitle}>About Me</a>
-        </div>
+            <span className={classes.scrollTitle}>About Me</span>
+        </a>
     )
 }
 
