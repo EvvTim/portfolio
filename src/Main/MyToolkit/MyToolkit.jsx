@@ -18,7 +18,7 @@ const classes = {
 
 function MyToolkit () {
     return (
-        <div id={'toolkit'} className={classes.myToolkitSection}>
+        <section id={'toolkit'} className={classes.myToolkitSection}>
             <h3 className={classes.sectionTitle}>My Toolkit 🛠️</h3>
             <div className={classes.toolsContainer}>
                 <span><img src={github} alt="github"/><p>GitHub</p></span>
@@ -31,8 +31,8 @@ function MyToolkit () {
                 <span><img src={css3} alt="css3"/><p>CSS3</p></span>
                 <span><img src={sass} alt="sass"/><p>SASS</p></span>
             </div>
-            <ToSection toSectionName={'contact me'} link={'#contacts'}/>
-        </div>
+            <ToSection toSectionName={'contact me'} link={'#footer-contacts'}/>
+        </section>
     )
 }
 

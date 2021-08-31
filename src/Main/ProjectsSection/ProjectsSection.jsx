@@ -18,13 +18,12 @@ const classes = {
 
 function ProjectsSection() {
     const [cardInfo, setCardInfo] = useState(true)
-    console.log(cardInfo)
     const addCardInfo = () => cardInfo ? classes.cardInfo : classes.cardInfoActive
 
     return (
-        <div id={'projects'} className={classes.projectsSection}>
+        <section id={'projects'} className={classes.projectsSection}>
             <h2 className={classes.sectionTitle}>Projects 🚧</h2>
-            <a className={classes.toProject} href="#project-cards">Click to project-card to see more info <span><i
+            <a className={classes.toProject} href="#project-cards">Click to the project-card to see more info <span><i
                 className="fas fa-angle-down"></i></span></a>
             <div className={classes.projectsContainer}>
                 <figure id={'project-cards'} onClick={() => cardInfo ? setCardInfo(false) : setCardInfo(true)}>
@@ -49,7 +48,7 @@ function ProjectsSection() {
                 </figure>
             </div>
             <ToSection link={"#toolkit"} toSectionName={'my toolkit'}/>
-        </div>
+        </section>
     )
 }
 
