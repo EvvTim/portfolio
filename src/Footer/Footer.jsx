@@ -1,8 +1,11 @@
 import React from "react";
+import FooterContacts from "./FooterContacts/FooterContacts";
 
 function Footer () {
     return (
-        <footer>Footer</footer>
+        <footer>
+            <FooterContacts/>
+        </footer>
     )
 }
 
