@@ -2,22 +2,15 @@ import React, {useState} from "react";
 import Navigation from "./Navigation/Navigation";
 import HamburgerButton from "./HamburgerButton/HamburgerButton";
 
-const classes = {
-    hamburger: 'hamburger',
-    hamburgerActive: 'hamburger hamburger--active',
-    navigation: 'navigation',
-    navigationActive: 'navigation navigation--active'
-}
 
-function Header() {
-    const [hamburger, setHamburger] = useState(true)
+function Header({onClick, hamburgerActive, navigationActive}) {
     return (
         <header>
             <HamburgerButton
-                className={hamburger ? classes.hamburger : classes.hamburgerActive}
-                onClick={() => hamburger ? setHamburger(false) : setHamburger(true)}
+                className={hamburgerActive}
+                onClick={onClick}
             />
-            <Navigation className={hamburger ? classes.navigation : classes.navigationActive}/>
+            <Navigation className={navigationActive}/>
         </header>
     )
 }
