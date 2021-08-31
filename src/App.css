@@ -10,10 +10,15 @@
 */
 
 .App {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all .3s .2s ease-in-out;
+}
+
+.App--active {
+    width: calc(100% - 300px);
 }
 
 a {
@@ -28,25 +33,25 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .navigation {
-    background-color: #BE624E;
+    background-color: #1c2431;
     position: fixed;
+    right: -300px;
     height: 100vh;
-    width: 100%;
-    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 300;
+    width: 300px;
+    transition: all .3s .2s ease-in-out;
 }
 
 .navigation--active {
-    display: flex;
+    right: 0;
 }
-
 
 header nav ul {
     display: flex;
@@ -54,7 +59,7 @@ header nav ul {
     flex-direction: column;
     justify-content: center;
     row-gap: 20px;
-
+    height: 100vh;
 }
 header nav ul li {
     list-style: none;
@@ -68,18 +73,15 @@ header nav ul li a {
 
 .nav-border:before {
     content: '';
+    margin-top: 5px;
     display: block;
-    border-bottom: 2px solid #BDB775;
+    border-bottom: 2px solid white;
     width: 0;
     transition: width .30s ease-in-out;
 }
 
 header nav ul li:hover .nav-border:before {
     width: 100%;
-}
-
-header nav ul li:hover a {
-    color: #BDB775;
 }
 
 .hamburger {
@@ -108,7 +110,7 @@ header nav ul li:hover a {
     background-color: #1F155E;
     left: 0;
     top: 50%;
-    transition: background-color 8ms 8ms ease-in-out;
+    transition: background-color .3s .2s ease-in-out;
 }
 
 .hamburger__inner::before,
@@ -119,7 +121,7 @@ header nav ul li:hover a {
     width: 100%;
     background-color: #1F155E;
     left: 0;
-    transition: transform 80ms 80ms ease-in-out;
+    transition: transform .3s .2s ease-in-out;
 }
 
 .hamburger__inner::before {
@@ -130,13 +132,13 @@ header nav ul li:hover a {
     top: 10px;
 }
 
-.hamburger--active .hamburger__inner:after {
-    background-color: white;
-}
+/*.hamburger--active .hamburger__inner:after {*/
+/*    background-color: white;*/
+/*}*/
 
-.hamburger--active .hamburger__inner:before {
-    background-color: white;
-}
+/*.hamburger--active .hamburger__inner:before {*/
+/*    background-color: white;*/
+/*}*/
 
 .hamburger--active .hamburger__inner {
     background-color: transparent;
@@ -158,9 +160,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1600px;
     width: 100%;
-    background-color: #f3f6f4;
 }
 
 .hello-section {
@@ -172,7 +172,8 @@ main {
     row-gap: 20px;
     padding: 20px;
     width: 100%;
-    background-color: white;
+    background-color: #f3f6f4;
+
 }
 
 .hello-container {
@@ -342,7 +343,6 @@ main {
     height: 100vh;
     width: 100%;
     row-gap: 20px;
-    background-color: #f3f6f4;
 }
 
 .about-me-container {
@@ -585,4 +585,27 @@ footer {
 .footer-navigation-container li a {
     color: white;
     font-size: 17px;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer-contacts ul {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-around;
+}
+
+.footer-contacts a {
+    color: white;
+    font-size: 20px;
 }
