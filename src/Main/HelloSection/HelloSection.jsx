@@ -4,17 +4,20 @@ import ScrollDown from "./ScrollDown";
 
 const classes = {
     helloSection: 'hello-section',
-    nameSpan: 'name-span'
+    nameSpan: 'name-span',
+    helloContainer: 'hello-container'
 }
 
 function HelloSection () {
     return (
         <section className={classes.helloSection}>
-            <span>👋 Hi,</span>
-            <span className={classes.nameSpan}>I’m Yauheni Tsimashchuk,</span>
-            <span>nice to meet you.</span>
-            <Contacts/>
-            <ScrollDown/>
+            <div className={classes.helloContainer}>
+                <span>👋 Hi,</span>
+                <span className={classes.nameSpan}>I’m Yauheni Tsimashchuk,</span>
+                <span>nice to meet you.</span>
+                <Contacts/>
+                <ScrollDown/>
+            </div>
         </section>
     )
 }
