@@ -6,7 +6,6 @@ import React, {useState} from "react";
 
 
 function App() {
-    const [hamburger, setHamburger] = useState(true)
     const classes = {
         hamburger: 'hamburger',
         hamburgerActive: 'hamburger hamburger--active',
@@ -15,11 +14,14 @@ function App() {
         app: 'App',
         appActive: 'App App--active'
     }
-    console.log(hamburger)
+
+    const [hamburger, setHamburger] = useState(true)
+
     return (
     <div className={hamburger ? classes.app : classes.appActive}>
         <Header
             onClick={() => hamburger ? setHamburger(false) : setHamburger(true)}
+            onClickLink={() => hamburger ? setHamburger(false) : setHamburger(true)}
             hamburgerActive={hamburger ? classes.hamburger : classes.hamburgerActive}
             navigationActive={hamburger ? classes.navigation : classes.navigationActive}
         />
