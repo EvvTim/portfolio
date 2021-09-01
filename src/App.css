@@ -53,6 +53,38 @@ header {
     right: 0;
 }
 
+@media screen and (max-device-width: 800px) {
+    .navigation {
+        flex-direction: row;
+        width: 100%;
+        right: -100vh;
+    }
+
+    .navigation--active {
+        right: 0;
+    }
+
+    .hamburger {
+        right: 0;
+    }
+
+    .hamburger--active {
+        background-color: white;
+    }
+
+    .hamburger--active .hamburger__inner:after {
+        background-color: white;
+    }
+
+    .hamburger--active .hamburger__inner:before {
+        background-color: white;
+    }
+
+    .App--active {
+        width: 100%;
+    }
+}
+
 header nav ul {
     display: flex;
     align-items: center;
@@ -609,4 +641,16 @@ footer {
 .footer-contacts a {
     color: white;
     font-size: 20px;
+}
+
+/*Iphone 6/7/8 Plus*/
+
+@media screen and (max-device-width: 414px) {
+    .name-span {
+        font-size: 40px !important;
+    }
+
+    .hello-contacts i {
+        font-size: 30px;
+    }
 }

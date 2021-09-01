@@ -10,7 +10,7 @@ const classes = {
 
 function HelloSection () {
     return (
-        <section className={classes.helloSection}>
+        <section id='main' className={classes.helloSection}>
             <div className={classes.helloContainer}>
                 <span>👋 Hi,</span>
                 <span className={classes.nameSpan}>I’m Yauheni Tsimashchuk,</span>
