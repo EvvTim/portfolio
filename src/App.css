@@ -63,10 +63,12 @@ header {
 
     .hamburger--active .hamburger__inner:after {
         background-color: white;
+        transition: all .3s .2s ease-in-out;
     }
 
     .hamburger--active .hamburger__inner:before {
         background-color: white;
+        transition: all .3s .2s ease-in-out;
     }
 
     .App--active {
@@ -131,7 +133,7 @@ header nav ul li:hover .nav-border:before {
     background-color: #1F155E;
     left: 0;
     top: 50%;
-    transition: background-color .3s .2s ease-in-out;
+    transition: all .3s .2s ease-in-out;
 }
 
 .hamburger__inner::before,
