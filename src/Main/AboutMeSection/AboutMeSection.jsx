@@ -16,7 +16,7 @@ function AboutMeSection() {
                <p className={classes.sectionContent}>Recently, I was completely absorbed by the world of coding 🐱‍💻 <br/> I am interested in Front-End. I am currently
                    looking for my first job or internship as a Junior Front-end Developer.</p>
                <div className={classes.clickToProject}>
-                   <a href="#projects">Click here to see all my projects </a>
+                   <a href="#projects">Click here to see my projects </a>
                    <span><i className="fas fa-angle-down"></i></span>
                </div>
            </div>
