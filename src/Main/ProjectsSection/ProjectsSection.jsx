@@ -1,5 +1,7 @@
-import React, {useState} from "react";
-import kartaPolaka from '../../images/karta-polaka.png'
+import React from "react";
+import kartaPolaka from '../../images/karta-polaka.png';
+import cryptoCurrencyRate from '../../images/cryptoCurrencyRate.png'
+import simpleCountdown from '../../images/simple-countdown.png'
 import ToSection from "../../shared/ToSection/ToSection";
 
 const classes = {
@@ -13,40 +15,79 @@ const classes = {
     tool: 'tool',
     projectLink: 'project-link',
     toProject: 'to-project',
-    soon: 'soon'
+    soon: 'soon',
+    projectLinkContainer: 'project-link-container',
 }
 
 function ProjectsSection() {
-    const [cardInfo, setCardInfo] = useState(true)
-    const addCardInfo = () => cardInfo ? classes.cardInfo : classes.cardInfoActive
-
     return (
         <section id={'projects'} className={classes.projectsSection}>
             <h2 className={classes.sectionTitle}>Projects 🚧</h2>
-            <a className={classes.toProject} href="#project-cards">Click to the project-card to see more info <span><i
-                className="fas fa-angle-down"></i></span></a>
             <div className={classes.projectsContainer}>
-                <figure id={'project-cards'} onClick={() => cardInfo ? setCardInfo(false) : setCardInfo(true)}>
+                <div className={'project-card'}>
                     <img src={kartaPolaka} alt="karta-polaka"/>
-                    <figcaption className={addCardInfo()}>
+                    <div className={'project-card-info'}>
                         <h3>Pole's Card - Preparation Materials</h3>
                         <p>This application will help you prepare for your own Pole's Card!</p>
                         <div className={classes.toolsContainer}>
                             <span className={classes.tool}>React Native</span>
+                            <span className={classes.tool}>React</span>
                             <span className={classes.tool}>Firebase</span>
                             <span className={classes.tool}>JavaScript</span>
+                            <span className={classes.tool}>HTML</span>
+                            <span className={classes.tool}>CSS</span>
                         </div>
-                        <a className={classes.projectLink}
-                           href="https://play.google.com/store/apps/details?id=com.kartapolaka.app">Google Play</a>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <div className={classes.soon}><h3>Soon...</h3></div>
-                </figure>
-                <figure>
-                    <div className={classes.soon}><h3>Soon...</h3></div>
-                </figure>
+                        <div className={classes.projectLinkContainer}>
+                            <p>Links:</p>
+                            <a className={classes.projectLink}
+                               href="https://play.google.com/store/apps/details?id=com.kartapolaka.app">Google Play</a>
+                        </div>
+                    </div>
+                </div>
+                <div className={'project-card'}>
+                    <img src={cryptoCurrencyRate} alt="cryptoCurrencyRate"/>
+                    <div className={'project-card-info'}>
+                        <h3>CryptoCurrencyRate.today</h3>
+                        <p>Actual crypto rate and cryptocurrency calculator</p>
+                        <div className={classes.toolsContainer}>
+                            <span className={classes.tool}>React</span>
+                            <span className={classes.tool}>JavaScript</span>
+                            <span className={classes.tool}>TypeScript</span>
+                            <span className={classes.tool}>CoinGecko API</span>
+                            <span className={classes.tool}>HTML</span>
+                            <span className={classes.tool}>CSS</span>
+
+                        </div>
+                        <div className={classes.projectLinkContainer}>
+                            <p>Links:</p>
+                            <a className={classes.projectLink}
+                               href="https://cryptocurrencyrate.today/">CryptoCurrencyRate.today</a>
+                        </div>
+                    </div>
+                </div>
+                <div className={'project-card'}>
+                    <img src={simpleCountdown} alt="simple-countdown"/>
+                    <div className={'project-card-info'}>
+                        <h3>JavaScript Countdown Timer</h3>
+                        <p>Simple countdown timer</p>
+                        <div className={classes.toolsContainer}>
+                            <span className={classes.tool}>JavaScript</span>
+                            <span className={classes.tool}>TypeScript</span>
+                            <span className={classes.tool}>HTML</span>
+                            <span className={classes.tool}>CSS</span>
+
+                        </div>
+                        <div className={classes.projectLinkContainer}>
+                            <p>Links:</p>
+                            <a className={classes.projectLink}
+                               href="https://evvtim.github.io/simple-countdown/">JavaScript Countdown Timer</a>
+                            <a className={classes.projectLink}
+                               href="https://github.com/EvvTim/simple-countdown">GitHub</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <ToSection link={"#toolkit"} toSectionName={'my toolkit'}/>
         </section>
     )
